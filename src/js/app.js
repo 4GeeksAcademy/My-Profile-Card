@@ -42,32 +42,15 @@ function render(variables = {}) {
           <h2>
             ${variables.role ? variables.role : "Role"}
           </h2>
-          <h3>
-            
-            ${variables.city ? variables.city : ""}${
-    variables.city && variables.country ? "," : ""
-  }  
+          <h3>            
+            ${variables.city ? variables.city : ""}${variables.city && variables.country ? "," : ""}  
             ${variables.country ? variables.country : ""}
           </h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/${
-              variables.twitter
-            }">  <i class="${
-    variables.twitter ? `fab fa-twitter` : ""
-  }"></i>  </a></li>
-            <li><a href="https://github.com/${variables.github}"><i class="${
-    variables.github ? `fab fa-github` : ""
-  }"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/${
-              variables.linkedin
-            }"><i class="${
-    variables.linkedin ? `fab fa-linkedin` : ""
-  }"></i></a></li>
-            <li><a href="https://instagram.com/${
-              variables.instagram
-            }"><i class="${
-    variables.instagram ? `fab fa-instagram` : ""
-  }"></i></a></li>
+            <li><a href="https://twitter.com/${variables.twitter}">  <i class="${variables.twitter ? `fab fa-twitter` : ""}"></i>  </a></li>
+            <li><a href="https://github.com/${variables.github}"><i class="${variables.github ? `fab fa-github` : ""}"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/${variables.linkedin}"><i class="${variables.linkedin ? `fab fa-linkedin` : ""}"></i></a></li>
+            <li><a href="https://instagram.com/${variables.instagram}"><i class="${variables.instagram ? `fab fa-instagram` : ""}"></i></a></li>
           </ul>
         </div>
     `;
