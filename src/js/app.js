@@ -1,29 +1,6 @@
 import { variationPlacements } from "@popperjs/core";
 import "../style/index.css";
 
-/**
- *  EDIT ONLY INSIDE THIS RENDER FUNCTION
- *  This function is called every time the user changes types or changes any input
- * 
-    {
-        includeCover: true, // if includeCover is true the algorithm should show the cover image
-        background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da", // this is the image's url that will be used as a background for the profile cover
-        avatarURL: "https://randomuser.me/api/portraits/women/42.jpg", // this is the url for the profile avatar
-        socialMediaPosition: "right", // social media bar position (left or right)
-        
-        twitter: null, // social media usernames
-        github: null,
-        linkedin: null,
-        instagram: null,
-
-        name: null,
-        lastName: null,
-        role: null,
-        country: null,
-        city: null
-    }
- */
-
 function render(variables = {}) {
   console.log("These are the current variables: ", variables); // print on the console
   // here we ask the logical questions to make decisions on how to build the html
@@ -36,21 +13,27 @@ function render(variables = {}) {
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>
-            ${variables.name === null ? "First" : variables.name}   
-            ${variables.lastName === null ? "Last" : variables.lastName}
+            Rebekah Banks
           </h1>
           <h2>
-            ${variables.role ? variables.role : "Role"}
+            Software Engineer
           </h2>
           <h3>            
-            ${variables.city ? variables.city : ""}${variables.city && variables.country ? "," : ""}  
-            ${variables.country ? variables.country : ""}
+            Stacy, USA
           </h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/${variables.twitter}">  <i class="${variables.twitter ? `fab fa-twitter` : ""}"></i>  </a></li>
-            <li><a href="https://github.com/${variables.github}"><i class="${variables.github ? `fab fa-github` : ""}"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/${variables.linkedin}"><i class="${variables.linkedin ? `fab fa-linkedin` : ""}"></i></a></li>
-            <li><a href="https://instagram.com/${variables.instagram}"><i class="${variables.instagram ? `fab fa-instagram` : ""}"></i></a></li>
+            <li><a href="https://twitter.com/${
+              variables.twitter
+            }">  <i class="${
+    variables.twitter ? `fab fa-twitter` : ""
+  }"></i>  </a></li>
+            <li><a href="https://github.com/Banksrm75"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/rebekah-banks-850122148"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${
+              variables.instagram
+            }"><i class="${
+    variables.instagram ? `fab fa-instagram` : ""
+  }"></i></a></li>
           </ul>
         </div>
     `;
@@ -64,11 +47,12 @@ window.onload = function() {
     // if includeCover is true the algorithm should show the cover image
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvLWEwMTAtbWFya3Vzcy0wNjY3LmpwZw.jpg",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL: "Profile Pix.jpg",
     // social media bar position (left or right)
-    socialMediaPosition: "position-left",
+    socialMediaPosition: "position-right",
     // social media usernames
     twitter: null,
     github: null,
